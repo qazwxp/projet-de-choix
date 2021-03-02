@@ -6,15 +6,6 @@
 body {
   background-color: rgb(42, 161, 182);
 }
-p1 {
-    text-align:left;
-    font-family:Times New Roman (serif);
-    color:rgb(172, 77, 0);
-    font-size:25px;
-    border-left: 4px solid rgb(0, 102, 219);
-    background-color:rgb(81, 160, 250)
-
-}
 h1 {
     text-align:center; 
     font-family:monospace;
@@ -26,15 +17,88 @@ h1 {
     -1px 1px 0 #000,
     1px 1px 0 #000;  
 }
+h2 {
+    text-align:center; 
+    font-family:monospace;
+    font-size:30px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+h3 {
+  text-align: left;
+  font-family: monospace;
+  font-size: 25px;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; 
+  
+}
+p {
+    font-size:20px;
+    font-family:monospace;
+    color:white;
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+.button1{
+  background-color: coral;
+  font-size: 20px;
+  font-family: monospace;
+}
+.button1:hover{
+  background-color:rgb(252, 117, 67)
+}
+
+hr{
+  color:coral; 
+  border-style:solid;
+}
 
 </style>
 </head>
 <body>
-<button type="button" onclick="document.getElementById('HTML').innerHTML='HTML(Hyper Text Markup Language) is a coding language which is often used to create websites. Almost all websites that you see are made with HTML. In this tutorial, you will learn how to make a website like the one you are on right now, starting with the basics. To make you HTML sites more interesting, you need CSS(Cascading Style Sheets) to add style.'"> English</button>
-<button type="button" onclick="document.getElementById('HTML').innerHTML='Le HTML(Hyper Text Markup Language) est un langage de codage qui est souvent utilisé pour créer les sites web. Presque tous les sites web que tu vois sont faits avec le HTML. dans ce tutoriel tu vas apprendre comment faire un site web comme celui que tu es sur, en commençant avec les basiques. Pour faire les sites du HTML plus interesant, tu as aussi besoin de la CSS(Cascading Style Sheets) pour ajouter style.'"> Francais</button>
-<h1>Tutoriel du HTML</h1>
+<button type="button"  onclick="
+  document.getElementById('title').innerHTML='HTML & JavaScript Tutorial'
+  document.getElementById('JavaScript').innerHTML='Javascript is a coding language that is often used to make things interactive on websites, games, and much more. In this tutotial you wil learn all of the basics of JavaScript and how to use it in web pages.<br>Click here to start.'; 
+  document.getElementById('HTML').innerHTML='HTML(Hyper Text Markup Language) is a coding language which is often used to create websites. Almost all websites that you see are made with HTML. In this tutorial, you will learn how to make a website like the one you are on right now, starting with the basics. To make you HTML sites more interesting, you need CSS(Cascading Style Sheets) to add style.<br>Click here to start.'"> 
+  English
+</button>
 
-<p1 id="HTML">Le HTML(Hyper Text Markup Language) est un langage de codage qui est souvent utilisé pour créer les sites web. Presque tous les sites web que tu vois sont faits avec le HTML. dans ce tutoriel tu vas apprendre comment faire un site web comme celui que tu es sur, en commençant avec les basiques. Pour faire les sites du HTML plus interesant, tu as aussi besoin de la CSS(Cascading Style Sheets) pour ajouter style.</p1>
-<p2 id="Javascript"></p2>
+<button  type="button" onclick="
+  document.getElementById('title').innerHTML='Tutoriel du HTML & JavaScript'
+  document.getElementById('JavaScript').innerHTML='Le Javascript est un langage de codage qui est souvent utilisé pour faire les choses interactives sur les sites web, les jeux et beaucoup plus. Dans ce tutoriel, tu vas apprendre tout les basiques du javascript et comment faire les éléments dans ce site web qui était fait avec le javascript. Le javascript peut être intégré avec le HTML.<br>Appuier ici pour commencer.'
+  document.getElementById('HTML').innerHTML='Le HTML(Hyper Text Markup Language) est un langage de codage qui est souvent utilisé pour créer les sites web. Presque tous les sites web que tu vois sont faits avec le HTML. dans ce tutoriel tu vas apprendre comment faire un site web comme celui que tu es sur, en commençant avec les basiques. Pour faire les sites du HTML plus interesant, tu as aussi besoin de la CSS(Cascading Style Sheets) pour ajouter style.<br>Appuier ici pour commencer.'">
+   Francais
+  </button>
 
+<h1 id="title">Tutoriel du HTML & JavaScript</h1>
+
+<a href="HTML.html"> 
+  <button id="HTML" type="button" class="button button1">
+    Le HTML(Hyper Text Markup Language) est un langage de codage qui est souvent utilisé pour créer les sites web. Presque tous les sites web que tu vois sont faits avec le HTML. dans ce tutoriel tu vas apprendre comment faire un site web comme celui que tu es sur, en commençant avec les basiques. Pour faire les sites du HTML plus interesant, tu as aussi besoin de la CSS(Cascading Style Sheets) pour ajouter style.<br>Appuier ici pour commencer.
+  </button>
+</a>
+<br>
+<br>
+<a href="JavaScript.html"> 
+  <button id="JavaScript" class="button button1">
+    Le Javascript est un langage de codage qui est souvent utilisé pour faire les choses interactives sur les sites web, les jeux et beaucoup plus. Dans ce tutoriel, tu vas apprendre tout les basiques du javascript et comment faire les éléments dans ce site web qui était fait avec le javascript. Le javascript peut être intégré avec le HTML.<br>Appuier ici pour commencer.
+  </button>
+</a>
+<br><br>
+<hr>
+<h2 id='tips'>Les Conseils Pour la Codage</h2>
+<h3>La Dépannage</h3>
+<p>La dépannage est l'acte de aller dans ta code s'il ne fonctionne pas et trouver pourquoi il ne fonctionne pas.</p>
 </body>
+</html>
