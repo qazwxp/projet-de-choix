@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<style>
+body {
+    background-color:rgb(42, 161, 182);
+
+}
+h1 {
+    text-align:center;
+    font-family:monospace;
+    font-size:50px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    
+}
+h2 {
+    text-align:center;
+    font-family:monospace;
+    font-size:30px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+p {
+    font-size:20px;
+    font-family:monospace;
+    color:white;
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+ul {
+    font-size:20px;
+    font-family:monospace;
+    color:white;
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+#warning {
+    text-align:center;
+    font-family:monospace;
+    color:red;
+    font-size:30px;
+}
+#editor{
+    display:inline-block;
+    margin-right:10px;
+}
+#editorLink{
+    display:inline-block;
+    font-family:monospace;
+    font-size:20px;
+}
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: coral;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 4px 2px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: monospace;
+  color: black;
+  display: block;
+}
+.sidenav a:hover {
+  color: white;
+}
+.main {
+  margin-left: 140px;
+}
+code {
+	background-color:rgb(16, 59, 66);
+    color:white;
+}
+hr{
+  border-color:black;
+}
+/*exampleCode{
+  background-color: rgb(16, 59, 66);
+  color:white;
+  font-family: monospace;
+  color:white;
+  font-size:15px;
+  display:inline-block;
+  margin-left: 50px;
+  margin-right: 250px;
+}*/
+textarea{
+  resize:none;
+  background-color: rgb(16, 59, 66);
+  border-color: rgb(12, 43, 48);
+  font-family: monospace;
+  font-size: 16px;
+  color: white;
+  border-width: 3px;
+}
+.center{
+  justify-content: center;
+  display:flex;
+}
+iframe{
+  background-color:white;
+  border-color:white;
+}
+
+</style>
+</head>
+<body >
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+  
+<div class="sidenav">
+  <a href="index.html">Retourner</a>
+<hr>
+  <a href="#essentialsTitle">Essentiels</a>
+<br>
+  <a href="#importantsTitle" onmouseover="elementsChange()" onmouseout="elementsChange1()">Éléments importants</a>
+<br>
+  <a href="#CSS">CSS</a>
+<br>
+  <a href="#Attributes">attributs</a>
+<br>
+  <a href="#text">Texte</a>
+<br>
+  <a href="#attributes"></a>
+</div>
+<!--  <script>
+  function elementsChange() {
+  document.getElementById('a1').innerHTML="joqjropqiwerpoqwjnerkq";
+}
+  function elementsChange1() {
+  document.getElementById('importantElements').innerHTML="";
+}
+
+</script>-->
+<div class='main'>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+<button type="button"  onclick="
+  document.getElementById('title').innerHTML='HTML Tutorial'
+  document.getElementById('warning').innerHTML=''
+  document.getElementById('editor').innerHTML='To try out what is taught in these lessons, you can use an'
+  document.getElementById('editorLink').innerHTML=`online editor like W3School's`
+  ">English
+</button>
+
+<button type="button"  onclick="
+  document.getElementById('title').innerHTML='Tutoriel du HTML'
+  document.getElementById('editor').innerHTML='Pour essayer ces lessons toi meme, tu peut utiliser un'
+  document.getElementById('warning').innerHTML='Advertisement: ce tutoriel utilise les termes de HTML en anglais, alors l’anglais est recommandé.'
+  document.getElementById('editorLink').innerHTML='éditeur en-ligne comme celui de W3schools'
+  ">Francias
+</button>
+
+<h1 id='title'>Tutoriel du HTML</h1>
+
+<warning id="warning">Advertisement: ce tutoriel utilise les termes de HTML en anglais, alors l’anglais est recommandé.</warning>
+<br>
+<p id='editor'>Pour essayer ces lessons toi meme, tu peut utiliser un </p>
+
+<a id='editorLink' target="_blank" href='https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic'>éditeur en-ligne comme celui de W3schools</a>
+
+<h2 id='essentialsTitle'>Les Essentiels</h2>
+
+<p id='essentials'>
+    Dans le HTML, tous les éléments vont commencer avec <code>&#60;(élément)></code> et finir avec <code>&#60;/(élément)></code>. Par exemple pour faire un paragraphe, tu dois faire <code>&#60;p>(texte)&#60;/p></code> pour créer le texte.<br>
+    Tou les documents HTML ont besoin de quelques choses.<br></p>
+<ul id='essentialsList'>
+    <li><code>&#60;!DOCTYPE html></code> va en haut de toute la code, il dit le navigateur que ton document est fait en HTML
+    <li><code>&#60;HTML>(code)&#60;/HTML></code> entour tout ton code (sauf le DOCTYPE html). Tu peux aussi mettre l'attribut "lang" dans ça (<code>&#60;HTML lang="eng/fr etc."></code>) pour aider le navigateur. Ça dit la langue de ta page.
+    <li><code>&#60;head></code> (tête) est utilisé pour contenir l'important information de ta page comme le titre. Plus d'information sur les éléments dans le <code>&#60;head></code> ici.
+    <li><code>&#60;body></code>entoure les choses qui vont être montrées sur ta page, comme le texte ou les form.</ul>
+    
+    <div class="center">
+    <textarea id="textarea1" rows="9" cols="50">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      </body>
+      </html>
+     </textarea>
+     <script>
+    function updateIframe1(){
+        var myFrame1 = $("#frame1").contents().find('body');
+        var textareaValue1 = $("#textarea1").val();
+        myFrame1.html(textareaValue1);
+    }
+    
+    function loop1() {
+      setInterval(function(){
+        updateIframe1();
+      }, 1);
+    }
+  loop1();
+</script>
+    <iframe id="frame1"></iframe>
+    </div>
+    <p>Maintenant cette code montre rien, mais ça c'est les éléments essentiels que tu dois mettre dans ta page.</p>
+
+<h2 id='importantsTitle'>Les Éléments importants</h2>
+<ul id='importants'>
+    <li><code>&#60;p></code> veut dire paragraphe. Il est utilisé pour faire les paragraphes.
+<br><br>
+      <div class="center">
+        <textarea id="textarea2" rows="10" cols="65">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <p>Tu peux faire les sites web facilement avec le HTML.</p>
+      </body>
+      </html>
+        </textarea>
+      <script>
+    function updateIframe2(){
+        var myFrame2 = $("#frame2").contents().find('body');
+        var textareaValue2 = $("#textarea2").val();
+        myFrame2.html(textareaValue2);
+    }
+    
+    function loop2() {
+      setInterval(function(){
+        updateIframe2();
+      }, 1);
+    }
+  loop2();
+</script>
+    <iframe id="frame2"></iframe>
+        </div>
+<br>
+
+    <li><code>&#60;h></code> veut dire "header" en anglais. Il est utilisé pour faire les titres. Tu peux utiliser h1-h6, 1 est le plus important et six et le moins important
+<br><br>
+      <div class="center">
+        <textarea id="textarea3" rows="11" cols="70">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+      </body>
+      </html>
+        </textarea>
+
+<script>
+    function updateIframe3(){
+        var myFrame3 = $("#frame3").contents().find('body');
+        var textareaValue3 = $("#textarea3").val();
+        myFrame3.html(textareaValue3);
+    }
+    
+    function loop3() {
+      setInterval(function(){
+        updateIframe3();
+      }, 1);
+    }
+  loop3();
+</script>
+    <iframe id="frame3"></iframe>
+        </div>
+<br>
+    <li><code>&#60;a></code> est utilisé pour faire les attributs. Les attributs peuvent ajouter l'information sur les éléments et leur dire comment acter. Plus info sur les attributs <a href=#attributes>ici</a>.
+<br><br>
+      <div class="center">
+        <textarea id="textarea4" rows="14" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+          <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html">Appuyer ici pour un article avec l'histoire du HTML</a>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframe4(){
+        var myFrame4 = $("#frame4").contents().find('body');
+        var textareaValue4 = $("#textarea4").val();
+        myFrame4.html(textareaValue4);
+    }
+    
+    function loop4() {
+      setInterval(function(){
+        updateIframe4();
+      }, 1);
+    }
+  loop4();
+</script>
+    <iframe id="frame4"></iframe>
+        </div>
+<br>
+    
+        <!-- do attributes sometime -->
+    <li><code>&#60;br></code> peut être utilisé n'importe où dans un document pour créer une brise dans la ligne ("break" en anglais). Il peut aussi créer un espace entre les éléments.
+<br><br>
+      <div class="center">
+        <textarea id="textarea5" rows="16" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+          <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html">Appuyer ici pour un article avec l'histoire du HTML</a>
+          <p> Le HTML veut dire: <br>Hyper<br>Text<br>Markup<br>Language<br> (en anglais)</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframe5(){
+        var myFrame5 = $("#frame5").contents().find('body');
+        var textareaValue5 = $("#textarea5").val();
+        myFrame5.html(textareaValue5);
+    }
+    
+    function loop5() {
+      setInterval(function(){
+        updateIframe5();
+      }, 1);
+    }
+  loop5();
+</script>
+    <iframe id="frame5"></iframe>
+        </div>
+<br>
+    <li><code>&#60;ul</code> est utilisé pour faire les listes ("unordered list" en anglais). Dans ces listes, tu dois mettre <code>&#60;li></code> ("list item" en anglais) pour faire les points. Tu peux mettre les listes dans les listes pour créer les indentations des certains points.
+<br><br>
+      <div class="center">
+        <textarea id="textarea6" rows="23" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+          <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html">Appuyer ici pour un article avec l'histoire du HTML</a>
+          <p> Le HTML veut dire: <br>Hyper<br>Text<br>Markup<br>Language<br> (en anglais)</p>
+          <ul>Les autres languages de codage:
+          <li>JavaScript
+          <ul><li>Peux etre utiliser dans le HTML!</ul>
+          <li>Python
+          <li>C++
+          <li>PHP
+          </ul>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframe6(){
+        var myFrame6 = $("#frame6").contents().find('body');
+        var textareaValue6 = $("#textarea6").val();
+        myFrame6.html(textareaValue6);
+    }
+    
+    function loop6() {
+      setInterval(function(){
+        updateIframe6();
+      }, 1);
+    }
+  loop6();
+</script>
+    <iframe id="frame6"></iframe>
+        </div>
+<br>
+    <li><code>&#60;ol</code> est utilisé de la même façon que <code>&#60;ul</code> mais il utilise les nombres au lieu des points ("ordered list" en anglais).
+<br><br>
+      <div class="center">
+        <textarea id="textarea7" rows="30" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+          <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html">Appuyer ici pour un article avec l'histoire du HTML</a>
+          <p> Le HTML veut dire: <br>Hyper<br>Text<br>Markup<br>Language<br> (en anglais)</p>
+          <ul>Les autres languages de codage:
+          <li>JavaScript
+          <ul><li>Peux etre utiliser dans le HTML!</ul>
+          <li>Python
+          <li>C++
+          <li>PHP
+          </ul>
+          <ol>Les Langages de codage en ordre de creation:
+          <li>Python (1991)
+          <li>HTMl (1993)
+          <li>PHP (1994)
+          <li>JavaScript (1995)
+          <li>C++ (1998)
+          </ol>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframe7(){
+        var myFrame7 = $("#frame7").contents().find('body');
+        var textareaValue7 = $("#textarea7").val();
+        myFrame7.html(textareaValue7);
+    }
+    
+    function loop7() {
+      setInterval(function(){
+        updateIframe7();
+      }, 1);
+    }
+  loop7();
+</script>
+    <iframe id="frame7"></iframe>
+        </div>
+<br>
+    
+    <li><code>&#60;div></code> est utilisé pour créer les sections divisées dans ton code. Ça peut aider avec mettre un style différent dans une section. Il est comme un contenant pour une section de ton code.
+<br><br>
+      <div class="center">
+        <textarea id="textarea8" rows="32" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <title>Mon Premier Site Web</title>
+      </head>
+      <body>
+      <h>Pourquoi Utiliser le HTML</h>
+          <p>Tu peux faire les sites web facilement avec le HTML.</p>
+          <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html">Appuyer ici pour un article avec l'histoire du HTML</a>
+          <p> Le HTML veut dire: <br>Hyper<br>Text<br>Markup<br>Language<br> (en anglais)</p>
+    <div class="autreLangages">
+          <ul>Les autres languages de codage:
+          <li>JavaScript
+          <ul><li>Peux etre utiliser dans le HTML!</ul>
+          <li>Python
+          <li>C++
+          <li>PHP
+          </ul>
+          <ol>Les Langages de codage en ordre de creation:
+          <li>Python (1991)
+          <li>HTMl (1993)
+          <li>PHP (1994)
+          <li>JavaScript (1995)
+          <li>C++ (1998)
+          </ol>
+    </div>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframe8(){
+        var myFrame8 = $("#frame8").contents().find('body');
+        var textareaValue8 = $("#textarea8").val();
+        myFrame8.html(textareaValue8);
+    }
+    
+    function loop8() {
+      setInterval(function(){
+        updateIframe8();
+      }, 1);
+    }
+  loop8();
+</script>
+    <iframe id="frame8"></iframe>
+        </div>
+<br>
+
+
+<h2 id='CSS'>CSS</h2>
+<p>Le CSS ("Cascading Style Sheets" en anglais) est essentiel pour faire un bon site web. Il peut styler les éléments dans beaucoup de façon, sois c'est la couleur, font ou frontière. Il y a plusieurs types que tu peux contrôler le CSS. voici les exemples.</p>
+<!--mxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiew-->
+
+<h2 id='Attributes'>Les Attributs</h2>
+<p>Les Attributs sont les choses que tu peux ajouter aux éléments pour ajouter information plus spécifique. Tu ajoutes les éléments dans l'étiquette d'ouvrit d'un élément. Par exemple <code>&#60;p (attribut)="(info)">(texte)&#60;/p></code><br> Les exemples des attributs sont:</p>
+<ul>
+<li><code>src</code> est utilisé pour ajouter les sources a les éléments comme les images, sons, vidéos et plus. Dans ces éléments, il dit la code ou trouver l'image ou vidéo, etc. L'image que tu ajoutes dois être dans le même dossier que ton code.
+<li><code>href</code> est utilisé pour faire les liens. Si tu le mis dans un élément, il devient un lien et si tu le cliques il te prend a une source. Tu peux aussi l'utiliser pour aller à une certaine élément dans ta page par mettre <code>#(id du élément)</code> au lieu du lien.
+<li><code>id</code> est utilisé pour identifier les éléments. Ça c'est utile pour beaucoup de raisons. Tu peux ajouter le style aux éléments individuellement dans le CSS par ajouter un "#" avant l'id et ajouter les choses normalement.
+</ul>
+
+<h2 id='text'>La Texte dans HTML</h2>
+
+<p>Dans le HTML, tu peux utiliser le CSS pour faire beaucoup avec la texte. Comme j'ai dit, tu peux utiliser les id pour individuellement ajouter le style a la texte, voici les different choses que tu peux changer:
+
+
+
+
+<!--oiewjroiwernkqjwebrlkqjwberlkjbqwelkrjbqwekrhqwelkjrbqwlekrbqwlemrbqm,ewnrbqwe,mr--></p>
+
+<p>Il y a aussi des different étiquettes que tu peux toujours faire avec le HTML dans les elements de texte pour ajouter le changer dans plusieurs different facons. voici des examples:</p>
+<li><code>&#60;b></code> est uttiliser pour la texte gras ("bold" en anglais)
+      <div class="center">
+        <textarea id="textareaB" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte <b>gras</b> avec cette étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeB(){
+        var myFrameB = $("#frameB").contents().find('body');
+        var textareaValueB = $("#textareaB").val();
+        myFrameB.html(textareaValueB);
+    }
+    
+    function loopB() {
+      setInterval(function(){
+        updateIframeB();
+      }, 1);
+    }
+  loopB();
+</script>
+    <iframe id="frameB"></iframe>
+        </div>
+<br>
+<li><code>&#60;i></code> est uttiliser pour la texte italique
+      <div class="center">
+        <textarea id="textareaI" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte <i>italique</i> avec cette étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeI(){
+        var myFrameI = $("#frameI").contents().find('body');
+        var textareaValueI = $("#textareaI").val();
+        myFrameI.html(textareaValueI);
+    }
+    
+    function loopI() {
+      setInterval(function(){
+        updateIframeI();
+      }, 1);
+    }
+  loopI();
+</script>
+    <iframe id="frameI"></iframe>
+        </div>
+<br>
+<li><code>&#60;mark></code> est uttiliser pour la texte marqué ("marked" en anglais)
+      <div class="center">
+        <textarea id="textareaM" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte <mark>marqué</mark> avec cette étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeM(){
+        var myFrameM = $("#frameM").contents().find('body');
+        var textareaValueM = $("#textareaM").val();
+        myFrameM.html(textareaValueM);
+    }
+    
+    function loopM() {
+      setInterval(function(){
+        updateIframeM();
+      }, 1);
+    }
+  loopM();
+</script>
+    <iframe id="frameM"></iframe>
+        </div>
+        <br>
+<li><code>&#60;del></code> est uttiliser pour la texte supprimé ("deleted" en anglais)
+      <div class="center">
+        <textarea id="textareaD" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte <del>supprimé</del> avec cette étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeD(){
+        var myFrameD = $("#frameD").contents().find('body');
+        var textareaValueD = $("#textareaD").val();
+        myFrameD.html(textareaValueD);
+    }
+    
+    function loopD() {
+      setInterval(function(){
+        updateIframeD();
+      }, 1);
+    }
+  loopD();
+</script>
+    <iframe id="frameD"></iframe>
+        </div>
+<br>
+<li><code>&#60;ins></code> est uttiliser pour la texte souligner ("inserted" en anglais parce qu'il est utiliser avec la texte supprimé)
+      <div class="center">
+        <textarea id="textareaINS" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte <ins>souligner</ins> avec cette étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeINS(){
+        var myFrameINS = $("#frameINS").contents().find('body');
+        var textareaValueINS = $("#textareaINS").val();
+        myFrameINS.html(textareaValueINS);
+    }
+    
+    function loopINS() {
+      setInterval(function(){
+        updateIframeINS();
+      }, 1);
+    }
+  loopINS();
+</script>
+    <iframe id="frameINS"></iframe>
+        </div>
+<br>
+<li><code>&#60;sub></code> et <code>&#60;sup></code> sont uttilisés pour faire la texte en indice et exposant ("subscript" et "superscript" en anglais)
+      <div class="center">
+        <textarea id="textareaSS" rows="4" cols="70">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+      <p>Tu peux faire la texte en <sub>indice</sub> ou <sup>exposant</sup> avec ces étiquette</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeSS(){
+        var myFrameSS = $("#frameSS").contents().find('body');
+        var textareaValueSS = $("#textareaSS").val();
+        myFrameSS.html(textareaValueSS);
+    }
+    
+    function loopSS() {
+      setInterval(function(){
+        updateIframeSS();
+      }, 1);
+    }
+  loopSS();
+</script>
+    <iframe id="frameSS"></iframe>
+        </div>
+<br>
+<p>Avec le CSS, tu peux changer ces étiquettes et ajouter n'importe quoi comme étiquette, par exemple utiliser une étiquette appelé "aaaaaaaaaaa", puis ajouter une section pour le dans le CSS comme un élément normale.</p>
+</div class="main">
+</body>
+</html>
