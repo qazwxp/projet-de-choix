@@ -101,6 +101,39 @@ hr{
 <h2 id='tips'>Les Conseils Pour la Codage</h2>
 <h3>Le Dépannage</h3>
 <p>Le dépannage est l'acte d'aller dans ton code s'il ne fonctionne pas et trouver pourquoi il ne fonctionne pas. Voici quelques choses que tu peux faire pour essayer de réparer ton code quand il ne fonctionne pas.</p>
-<p id="consoleLog">Dans le JavaScript, il y a un fonctionne appelé console.log(); qui ajoute le texte dans le console pour que tu puisses savoir si quelque chose et en train d'être activé. Par exemple tu peux appeler cette fonction dans un élément s'il ne fonctionne pas pour voir s'il est en train d'être appelé du tout. Dans le HTML, tu peux mettre ça dans une étiquette de scripte et ça va fonctionner.</p>
+<p id="consoleLog">Dans le JavaScript, il y a un fonctionne appelé console.log(); qui ajoute le texte dans le console pour que tu puisses savoir si quelque chose et en train d'être activé. Par exemple tu peux appeler cette fonction dans un élément s'il ne fonctionne pas pour voir s'il est en train d'être appelé du tout. Dans le HTML, tu peux mettre ça dans une étiquette de scripte et ça va fonctionner. Pour voir le console, tu peux appuier ctrl + shift + i epuis cliquer "console" en haut droit.</p>
+    <div class="center">
+    <textarea id="textarea1" rows="9" cols="50">
+      <!DOCTYPE HTML>
+      <html>
+      <body>
+
+<script>
+function consoleTeste() {
+console.log('Ca Fonctionne!');
+}
+</script>
+<button onclick="consoleTeste();">cliquer ici pour tester la console.</button>
 </body>
+      </html>
+        
+     </textarea>
+     <script>
+    function updateIframe1(){
+        var myFrame1 = $("#frame1").contents().find('body');
+        var textareaValue1 = $("#textarea1").val();
+        myFrame1.html(textareaValue1);
+    }
+    
+    function loop1() {
+      setInterval(function(){
+        updateIframe1();
+      }, 1);
+    }
+  loop1();
+</script>
+    <iframe id="frame1"></iframe>
+    </div>
+ 
+  </body>
 </html>
