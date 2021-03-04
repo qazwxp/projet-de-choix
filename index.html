@@ -15,7 +15,7 @@ iframe{
   border-color:white;
 }
 h1 {
-    text-align:center; 
+    text-align:center;
     font-family:monospace;
     font-size:50px;
     color:white;
@@ -23,7 +23,7 @@ h1 {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;  
+    1px 1px 0 #000;
 }
 textarea{
   resize:none;
@@ -35,7 +35,7 @@ textarea{
   border-width: 3px;
 }
 h2 {
-    text-align:center; 
+    text-align:center;
     font-family:monospace;
     font-size:30px;
     color:white;
@@ -43,7 +43,7 @@ h2 {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
-    1px 1px 0 #000;  
+    1px 1px 0 #000;
 }
 h3 {
   text-align: left;
@@ -54,7 +54,7 @@ h3 {
   -1px -1px 0 #000,
   1px -1px 0 #000,
   -1px 1px 0 #000,
-  1px 1px 0 #000; 
+  1px 1px 0 #000;
   
 }
 p {
@@ -77,18 +77,20 @@ p {
 }
 
 hr{
-  color:coral; 
+  color:coral;
   border-style:solid;
 }
 
 </style>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
 <button type="button"  onclick="
   document.getElementById('title').innerHTML='HTML & JavaScript Tutorial'
-  document.getElementById('JavaScript').innerHTML='Javascript is a coding language that is often used to make things interactive on websites, games, and much more. In this tutotial you wil learn all of the basics of JavaScript and how to use it in web pages.<br>Click here to start.'; 
+  document.getElementById('JavaScript').innerHTML='Javascript is a coding language that is often used to make things interactive on websites, games, and much more. In this tutotial you wil learn all of the basics of JavaScript and how to use it in web pages.<br>Click here to start.';
   document.getElementById('HTML').innerHTML='HTML(Hyper Text Markup Language) is a coding language which is often used to create websites. Almost all websites that you see are made with HTML. In this tutorial, you will learn how to make a website like the one you are on right now, starting with the basics. To make you HTML sites more interesting, you need CSS(Cascading Style Sheets) to add style.<br>Click here to start.'
-  document.getElementById('consoleLog').innerHTML='In JavaScript, there is a function called console.log that logs text in the console so you know if something is being activated. for example you can call this function in an element if it doesn't work to see if it is being caleld at all. in HTML, you can put this in a script tag and it will work.'"> 
+  document.getElementById('consoleLog').innerHTML='In JavaScript, there is a function called console.log that logs text in the console so you know if something is being activated. for example you can call this function in an element if it doesn't work to see if it is being caleld at all. in HTML, you can put this in a script tag and it will work.'">
   English
 </button>
 
@@ -101,14 +103,14 @@ hr{
 
 <h1 id="title">Tutoriel du HTML & JavaScript</h1>
 
-<a href="HTML.html"> 
+<a href="HTML.html">
   <button id="HTML" type="button" class="button button1">
     Le HTML(Hyper Text Markup Language) est un langage de codage qui est souvent utilisé pour créer les sites web. Presque tous les sites web que tu vois sont faits avec le HTML. dans ce tutoriel tu vas apprendre comment faire un site web comme celui que tu es sur, en commençant avec les basiques. Pour faire les sites du HTML plus interesant, tu as aussi besoin de la CSS(Cascading Style Sheets) pour ajouter style.<br>Appuier ici pour commencer.
   </button>
 </a>
 <br>
 <br>
-<a href="JavaScript.html"> 
+<a href="JavaScript.html">
   <button id="JavaScript" class="button button1">
     Le Javascript est un langage de codage qui est souvent utilisé pour faire les choses interactives sur les sites web, les jeux et beaucoup plus. Dans ce tutoriel, tu vas apprendre tout les basiques du javascript et comment faire les éléments dans ce site web qui était fait avec le javascript. Le javascript peut être intégré avec le HTML.<br>Appuier ici pour commencer.
   </button>
@@ -119,18 +121,21 @@ hr{
 <h3>Le Dépannage</h3>
 <p>Le dépannage est l'acte d'aller dans ton code s'il ne fonctionne pas et trouver pourquoi il ne fonctionne pas. Voici quelques choses que tu peux faire pour essayer de réparer ton code quand il ne fonctionne pas.</p>
 <p id="consoleLog">Dans le JavaScript, il y a un fonctionne appelé console.log(); qui ajoute le texte dans le console pour que tu puisses savoir si quelque chose et en train d'être activé. Par exemple tu peux appeler cette fonction dans un élément s'il ne fonctionne pas pour voir s'il est en train d'être appelé du tout. Dans le HTML, tu peux mettre ça dans une étiquette de scripte et ça va fonctionner. Pour voir le console, tu peux appuier ctrl + shift + i epuis cliquer "console" en haut droit.</p>
-    <div class="center">
-    <textarea id="textarea1" rows="16" cols="50">
+    
+  <div class="center">
+    <textarea id="textarea1" rows="17" cols="60">
       <!DOCTYPE HTML>
       <html>
       <body>
 
-<script>
+&#60;script>
 function consoleTeste() {
 console.log('Ca Fonctionne!');
 }
-</script>
+&#60;/script>
 <button onclick="consoleTeste();">cliquer ici pour tester la console.</button>
+<br>
+<p>Appuier ctrl + shift + i et cliquer "console" pour voir le notification.</p>
 </body>
 </html>
 </textarea>
