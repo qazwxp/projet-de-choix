@@ -139,11 +139,9 @@ iframe{
 <br>
   <a href="#CSS">CSS</a>
 <br>
-  <a href="#Attributes">attributs</a>
+  <a href="#Attributes">Attributs</a>
 <br>
   <a href="#text">Texte</a>
-<br>
-  <a href="#attributes"></a>
 </div>
 <!--  <script>
   function elementsChange() {
@@ -152,7 +150,6 @@ iframe{
   function elementsChange1() {
   document.getElementById('importantElements').innerHTML="";
 }
-
 </script>-->
 <div class='main'>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -500,8 +497,84 @@ iframe{
 
 
 <h2 id='CSS'>CSS</h2>
-<p>Le CSS ("Cascading Style Sheets" en anglais) est essentiel pour faire un bon site web. Il peut styler les éléments dans beaucoup de façon, sois c'est la couleur, font ou frontière. Il y a plusieurs types que tu peux contrôler le CSS. voici les exemples.</p>
-<!--mxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiewmxipsaenriqwenrcpqwienrqewpirnqewoiurnqewrqweorjiqweirjqoweijroqiew-->
+<p>Le CSS ("Cascading Style Sheets" en anglais) est essentiel pour faire un bon site web. Il peut styler les éléments dans beaucoup de façon, sois c'est la couleur, font ou frontière. Voici quelques-uns des éléments de CSS qui sont souvent utilisés.</p>
+
+<li><code>color</code> (couleur en français) change le couleur d'un élément, mais ne confuse ça pas avec le couleur du arriere plan
+<li><code>background-color</code> change la couleur du fond d'un élément.
+<li><code>font-family</code> change le font de le texte dans un élément.
+<li><code>font-size</code> change la grandeur du texte dans un élément. Il utilise les pixel (exemple 20px)
+<li><code>text-align</code> change comment le texte et aligné
+<br><br>
+      <div class="center">
+        <textarea id="textareaCSS1" rows="21" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      <style>
+      p {
+        color: blue;
+        background-color: black;
+        font-family: Garamond;
+        font-size: 35px;
+        text-align:center;
+        
+      }
+      
+      body {background-color: blue;}
+      </style>
+      </head>
+      <body>
+<p>Cette texte utilise tout les éléments de CSS que j'ai mentioner</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeCSS1(){
+        var myFrameCSS1 = $("#frameCSS1").contents().find('body');
+        var textareaValueCSS1 = $("#textareaCSS1").val();
+        myFrameCSS1.html(textareaValueCSS1);
+    }
+    
+    function loopCSS1() {
+      setInterval(function(){
+        updateIframeCSS1();
+      }, 1);
+    }
+  loopCSS1();
+</script>
+    <iframe id="frameCSS1"></iframe>
+        </div>
+
+<p>Il y a plusieurs façons d'ajouter le CSS. voici les exemples.</p>
+
+<li>CSS en ligne: quand tu ajoutes le CSS dans la même ligne que l'étiquette avec l'attribut de style.
+      <div class="center">
+        <textarea id="textareaInCSS" rows="9" cols="75">
+      <!DOCTYPE HTML>
+      <html lang="fr">
+      <head>
+      </head>
+      <body>
+<p style="font-family:monospace;color:red">Ca c'est le CSS en ligne!</p>
+      </body>
+      </html>
+        </textarea>
+        <script>
+    function updateIframeInCSS(){
+        var myFrameInCSS = $("#frameInCSS").contents().find('body');
+        var textareaValueInCSS = $("#textareaInCSS").val();
+        myFrameInCSS.html(textareaValueInCSS);
+    }
+    
+    function loopInCSS() {
+      setInterval(function(){
+        updateIframeInCSS();
+      }, 1);
+    }
+  loopInCSS();
+</script>
+    <iframe id="frameInCSS"></iframe>
+        </div>
 
 <h2 id='Attributes'>Les Attributs</h2>
 <p>Les Attributs sont les choses que tu peux ajouter aux éléments pour ajouter information plus spécifique. Tu ajoutes les éléments dans l'étiquette d'ouvrit d'un élément. Par exemple <code>&#60;p (attribut)="(info)">(texte)&#60;/p></code><br> Les exemples des attributs sont:</p>
@@ -520,7 +593,7 @@ iframe{
 
 <!--oiewjroiwernkqjwebrlkqjwberlkjbqwelkrjbqwekrhqwelkjrbqwlekrbqwlemrbqm,ewnrbqwe,mr--></p>
 
-<p>Il y a aussi des different étiquettes que tu peux toujours faire avec le HTML dans les elements de texte pour ajouter le changer dans plusieurs different facons. voici des examples:</p>
+<p>Il y a aussi des different étiquettes que tu peux toujours faire avec le HTML dans les éléments de texte pour ajouter le changer dans plusieurs different facons. voici des examples:</p>
 <li><code>&#60;b></code> est uttiliser pour la texte gras ("bold" en anglais)
       <div class="center">
         <textarea id="textareaB" rows="4" cols="70">
