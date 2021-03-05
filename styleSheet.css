@@ -1,0 +1,120 @@
+body {
+    background-color:rgb(42, 161, 182);
+
+}
+h1 {
+    text-align:center;
+    font-family:monospace;
+    font-size:50px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    
+}
+h2 {
+    text-align:center;
+    font-family:monospace;
+    font-size:30px;
+    color:white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+p {
+    font-size:20px;
+    font-family:monospace;
+    color:white;
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+ul {
+    font-size:20px;
+    font-family:monospace;
+    color:white;
+    text-shadow:
+    -0.5px -0.5px 0 #000,
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+    0.5px 0.5px 0 #000;
+}
+#warning {
+    text-align:center;
+    font-family:monospace;
+    color:red;
+    font-size:30px;
+}
+#editor{
+    display:inline-block;
+    margin-right:10px;
+}
+#editorLink{
+    display:inline-block;
+    font-family:monospace;
+    font-size:20px;
+}
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: coral;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 4px 2px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: monospace;
+  color: black;
+  display: block;
+}
+.sidenav a:hover {
+  color: white;
+}
+.main {
+  margin-left: 140px;
+}
+code {
+	background-color:rgb(16, 59, 66);
+    color:white;
+}
+hr{
+  border-color:black;
+}
+/*exampleCode{
+  background-color: rgb(16, 59, 66);
+  color:white;
+  font-family: monospace;
+  color:white;
+  font-size:15px;
+  display:inline-block;
+  margin-left: 50px;
+  margin-right: 250px;
+}*/
+textarea{
+  resize:none;
+  background-color: rgb(16, 59, 66);
+  border-color: rgb(12, 43, 48);
+  font-family: monospace;
+  font-size: 16px;
+  color: white;
+  border-width: 3px;
+}
+.center{
+  justify-content: center;
+  display:flex;
+}
+iframe{
+  background-color:white;
+  border-color:white;
+}
